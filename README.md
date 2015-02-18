@@ -39,7 +39,7 @@ Drop ```clj-repl.el``` into your Emacs configuration to have these handy functio
  1. Create a ```.classpath``` file in your project directory, so that ```clojure-repl``` can find it. ```lein classpath > .classpath``` should work well for this.
  1. ```M-x clj-repl```
 1. Clojurescript
- 1. Just make sure figwheel is set up for your project, and then ```M-x cljs-repl```
+ 1. Make sure figwheel is set up for your project, and then ```M-x cljs-repl```
  1. Alternatively, you can set up some other CLJS REPL configuration and ```(setq cljs-repl-command "some command for your CLJS REPL")``` to use it.
 
 ## TODO
