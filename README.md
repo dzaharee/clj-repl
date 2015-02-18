@@ -14,7 +14,7 @@ Drop ```clj-repl.el``` into your Emacs configuration to have these handy functio
    ```clojure-repl``` (which must be in your ```$PATH```).
 1. ```cljs-repl```: Starts an ```*inferior-lisp*``` buffer by executing ```lein
    figwheel```, which requires proper configuration in your project.
- 1. ```lein new figwheel``` is a great way to get Figwheel up and running quickly.
+ 1. ```lein new figwheel your-project``` is a great way to get Figwheel up and running quickly.
 
 ### Dependencies
 
