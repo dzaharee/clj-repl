@@ -12,9 +12,11 @@ Drop ```clj-repl.el``` into your Emacs configuration to have these handy functio
 
 1. ```clj-repl```: Starts an ```*inferior-lisp*``` buffer by executing
    ```clojure-repl``` (which must be in your ```$PATH```).
+ 1. ```clojure-repl``` is the default. To use a different program, set ```clj-repl-helper-script```. (example below)
 1. ```cljs-repl```: Starts an ```*inferior-lisp*``` buffer by executing ```lein
    figwheel```, which requires proper configuration in your project.
  1. ```lein new figwheel your-project``` is a great way to get Figwheel up and running quickly.
+ 1. ```lein figwheel``` is the default. To use a different program, set ```cljs-repl-helper-script```. (example below)
 
 ### Dependencies
 
@@ -34,12 +36,11 @@ Drop ```clj-repl.el``` into your Emacs configuration to have these handy functio
 ## Usage
 
 1. Clojure
- 1. Create a ```.classpath``` file in your project directory, so that
-    ```clojure-repl``` can find it. ```lein classpath > .classpath``` should
-    work well for this.
+ 1. Create a ```.classpath``` file in your project directory, so that ```clojure-repl``` can find it. ```lein classpath > .classpath``` should work well for this.
  1. ```M-x clj-repl```
 1. Clojurescript
- 1. Just make sure figwheel is set up, and then ```M-x cljs-repl```
+ 1. Just make sure figwheel is set up for your project, and then ```M-x cljs-repl```
+ 1. Alternatively, you can set up some other CLJS REPL configuration and ```(setq cljs-repl-helper-script "some command for your CLJS REPL")``` to use it.
 
 ## TODO
 
