@@ -27,9 +27,9 @@ Drop ```clj-repl.el``` into your Emacs configuration to have these handy functio
 1. Make sure ```clj-repl.el``` is loaded into your Emacs configuration. For example, if you place this repository in your home directory you can simply add this to your Emacs init file (probably ```~/.emacs.d/init.el```): ```(load-library "~/clj-repl/clj-repl")```.
 1. Either
  1. Place the ```clojure-repl``` shell script in your ```$PATH```
-  1. Example: ```cp clojure-repl /usr/local/bin/```
+   1. Example: ```cp clojure-repl /usr/local/bin/```
  1. Or set ```clj-repl-helper-script``` in your Emacs configuration to the name of the program you wish to run to start your Clojure REPL.
-  1. Example: ```(setq clj-repl-helper-script "my-other-program arg1 arg2")```
+   1. Example: ```(setq clj-repl-helper-script "my-other-program arg1 arg2")```
 
 ## Usage
 
