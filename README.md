@@ -50,6 +50,7 @@ Drop ```clj-repl.el``` into your Emacs configuration to have these handy functio
 ## License
 
 Copyright © 2015 Dave Zaharee
+
 Copyright © 2015 Matt Oquist
 
 Distributed under the Eclipse Public License either version 1.0 or (at
