@@ -1,3 +1,8 @@
+;;-------------------------
+;; Configuration defaults
+(setq default-clj-repl-command "clojure-repl") ; set clj-repl-command to override
+(setq default-cljs-repl-command "lein figwheel") ; set cljs-repl-command to override
+
 ;; https://marmalade-repo.org/packages/clojure-mode-extra-font-locking
 (require 'clojure-mode-extra-font-locking)
 
@@ -65,11 +70,11 @@ ENDP and DELIM."
   (interactive)
   (if (bound-and-true-p clj-repl-command)
       (ensure-repl clj-repl-command)
-    (ensure-repl "clojure-repl")))
+    (ensure-repl default-clj-repl-command)))
 
 (defun cljs-repl ()
   (interactive)
   (if (bound-and-true-p cljs-repl-command)
       (ensure-repl cljs-repl-command)
-    (ensure-repl "lein figwheel")))
+    (ensure-repl default-cljs-repl-command)))
 
