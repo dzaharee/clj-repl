@@ -63,13 +63,13 @@ ENDP and DELIM."
 
 (defun clj-repl ()
   (interactive)
-  (if (bound-and-true-p clj-repl-helper-script)
-      (ensure-repl clj-repl-helper-script)
+  (if (bound-and-true-p clj-repl-command)
+      (ensure-repl clj-repl-command)
     (ensure-repl "clojure-repl")))
 
 (defun cljs-repl ()
   (interactive)
-  (if (bound-and-true-p cljs-repl-helper-script)
-      (ensure-repl cljs-repl-helper-script)
+  (if (bound-and-true-p cljs-repl-command)
+      (ensure-repl cljs-repl-command)
     (ensure-repl "lein figwheel")))
 
