@@ -69,5 +69,7 @@ ENDP and DELIM."
 
 (defun cljs-repl ()
   (interactive)
-  (ensure-repl "lein figwheel"))
+  (if (bound-and-true-p cljs-repl-helper-script)
+      (ensure-repl cljs-repl-helper-script)
+    (ensure-repl "lein figwheel")))
 
