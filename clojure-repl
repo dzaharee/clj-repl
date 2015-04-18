@@ -17,13 +17,9 @@ GREP=/bin/grep
 JAVA=/usr/bin/java
 SORT=/usr/bin/sort
 TAIL=/usr/bin/tail
-RLWRAP=/usr/bin/rlwrap
 
 # Override defaults in $CONF
 [[ -f $HOME/$CONF ]] && . "$HOME/$CONF"
-
-# Carp if RLWRAP is missing, but keep going.
-[[ ! -f $RLWRAP ]] && echo "$RLWRAP not found, continuing without. Sorry!" && RLWRAP=
 
 me=$($BASENAME $0)
 
@@ -172,4 +168,4 @@ change_working_dir
 if [[ -n $VERBOSE ]]; then
     >&2 echo Starting clojure.main...
 fi
-$RLWRAP $JAVA -cp "$CLASSPATH" clojure.main -r
+$JAVA -cp "$CLASSPATH" clojure.main -r
