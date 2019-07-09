@@ -124,6 +124,11 @@ function find_clojure_jar {
     $FIND ~/.m2 -name clojure*.jar | $GREP org/clojure/clojure/ | $SORT -n | $TAIL -n1
 }
 
+# Find the latest (sort -n) version of the spec.alpha .jar in ~/.m2.
+function find_spec_alpha_jar {
+    $FIND ~/.m2 -name spec.alpha*.jar | $GREP org/clojure/spec.alpha/ | $SORT -n | $TAIL -n1
+}
+
 # Put the classpath on stdout for capture.
 function get_classpath {
     if [[ -n $VERBOSE ]]; then
@@ -131,7 +136,7 @@ function get_classpath {
     fi
     classpath="$(find_cat_file $CLASSPATH_FILE)"
     if [[ -z $classpath ]]; then
-        classpath="$(find_clojure_jar)"
+        classpath="$(find_clojure_jar)":"$(find_spec_alpha_jar)"
         >&2 echo
         >&2 echo "WARNING: No $CLASSPATH_FILE found, resorting to $classpath."
         >&2 echo "         You may use 'lein classpath > $CLASSPATH_FILE' or 'cmma classpath > $CLASSPATH_FILE' to make a $CLASSPATH_FILE file for your project."
