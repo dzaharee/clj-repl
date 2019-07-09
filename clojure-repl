@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Start a Clojure REPL with a configured classpath and working directory.
 
 # Configuration
